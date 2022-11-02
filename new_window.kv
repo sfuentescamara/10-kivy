@@ -1,0 +1,61 @@
+#:kivy 2.0
+
+ScreenManager: 
+    Primera:
+
+
+<Primera>:
+    name: "1"
+    MDLabel :
+        text: root.title
+        halign: 'center'
+        pos_hint: {'center_x': 0.5,'center_y':0.8}
+        font_size: 40
+
+    MDLabel :
+        text: root.text
+        halign: 'center'
+        pos_hint: {'center_x': 0.5,'center_y':0.7}
+        font_size: 27
+
+    MDLabel :
+        text: root.text_hiden
+        halign: 'center'
+        pos_hint: {'center_x': 0.5,'center_y':0.6}
+        font_size: 25
+
+    MDRectangleFlatButton:
+        text: 'Back'
+        pos_hint: {'center_x': 0.15,'center_y':0.2}
+        on_press:
+            root.back()
+
+    MDRectangleFlatButton:
+        text: 'Next'
+        pos_hint: {'center_x': 0.25,'center_y':0.2}
+        on_press:
+            root.next()
+
+    MDRectangleFlatButton:
+        text: 'Show'
+        pos_hint: {'center_x': 0.5,'center_y':0.4}
+        on_press:
+            root.show()
+
+    MDRectangleFlatButton:
+        text: 'Reset'
+        pos_hint: {'center_x': 0.5,'center_y':0.1}
+        on_press:
+            root.reset()
+
+    MDRectangleFlatButton:
+        text: 'Activate Randoms Verbs'
+        pos_hint: {'center_x': 0.75,'center_y':0.4}
+        on_press:
+            root.randomsVerbs()
+
+    MDRectangleFlatButton:
+        text: 'Generate'
+        pos_hint: {'center_x': 0.75,'center_y':0.2}
+        on_press:
+            root.randomNext()
