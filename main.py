@@ -104,7 +104,7 @@ class Grammar(Modo):
             self.id_verb = self.randomize(self.rl_verbs)
             self.text = self.allVerbs[self.id_verb][0]
             self.verb = self.allVerbs[self.id_verb]
-            self.allFormsVerbs = self.DictVerb().functionVerb(self.verb)
+        self.allFormsVerbs = self.DictVerb().functionVerb(self.verb)
         if id > 0:
             self.new(id)
         else:
@@ -137,7 +137,8 @@ class Grammar(Modo):
         self.index = -1
         self.bool_show = False
         self.bool_randomVerbs = False
-        self.title_randomVerbs = "Desactivate Random Verbs"
+        self.title_randomVerbs = "Activate Random Verbs"
+        self.verb = ["juego", "play", "played", "played", "playing"]
         self.rl_formsVerbs = [x for x in self.allFormsVerbs]
         self.rl_verbs = [x for x in self.allVerbs]
 
@@ -170,7 +171,7 @@ sm.add_widget(Vocabulary(name="Vocabulary"))
 
 class Aplication(MDApp):
     def build(self):
-        kv = Builder.load_file("test1.kv")
+        kv = Builder.load_file("display.kv")
         
         return kv
 
