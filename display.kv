@@ -1,0 +1,130 @@
+#:kivy 2.0
+
+WindowMain: 
+    Lobby:
+    Grammar:
+    Vocabulary:
+
+<Lobby>:
+    name: "Lobby"
+    MDLabel :
+        text: root.Screen
+        halign: 'center'
+        pos_hint: {'center_x': 0.5,'center_y':0.9}
+        font_size: 40
+
+    MDRectangleFlatButton:
+        text: 'Grammar'
+        size_hint: (0.2, 0.2)
+        pos_hint: {'center_x': 0.15,'center_y':0.2}
+        on_press:
+            root.changeScreen()
+            app.root.current = "Grammar"
+            root.manager.transition.direction = "left"
+
+    MDRectangleFlatButton:
+        text: 'Vocabulary'
+        size_hint: (0.2, 0.2)
+        pos_hint: {'center_x': 0.50,'center_y':0.2}
+        on_press:
+            root.changeScreen()
+            app.root.current = "Vocabulary"
+            root.manager.transition.direction = "left"
+
+    MDRectangleFlatButton:
+        text: 'Other'
+        size_hint: (0.2, 0.2)
+        pos_hint: {'center_x': 0.85,'center_y':0.2}
+        on_press:
+            root.changeScreen()
+            # app.root.current = "Vocabulary"
+            root.manager.transition.direction = "left"
+
+<Grammar>:
+    name: "Grammar"
+    MDLabel :
+        text: root.Screen
+        halign: 'center'
+        pos_hint: {'center_x': 0.5,'center_y':0.9}
+        font_size: 40
+
+    MDRectangleFlatButton:
+        text: 'Menu'
+        size_hint: (0.2, 0.05)
+        pos_hint: {'center_x': 0.15,'center_y':0.1}
+        on_press:
+            root.changeScreen()
+            app.root.current = "Lobby"
+            root.manager.transition.direction = "right"
+
+    
+    MDLabel :
+        text: root.title
+        halign: 'center'
+        pos_hint: {'center_x': 0.5,'center_y':0.8}
+        font_size: 40
+
+    MDLabel :
+        text: root.text
+        halign: 'center'
+        pos_hint: {'center_x': 0.5,'center_y':0.7}
+        font_size: 27
+
+    MDLabel :
+        text: root.text_hiden
+        halign: 'center'
+        pos_hint: {'center_x': 0.5,'center_y':0.6}
+        font_size: 25
+
+    MDRectangleFlatButton:
+        text: 'Back'
+        pos_hint: {'center_x': 0.15,'center_y':0.2}
+        on_press:
+            root.back()
+
+    MDRectangleFlatButton:
+        text: 'Next'
+        pos_hint: {'center_x': 0.25,'center_y':0.2}
+        on_press:
+            root.next()
+
+    MDRectangleFlatButton:
+        text: 'Show'
+        pos_hint: {'center_x': 0.5,'center_y':0.5}
+        on_press:
+            root.show()
+
+    MDRectangleFlatButton:
+        text: 'Reset'
+        pos_hint: {'center_x': 0.5,'center_y':0.1}
+        on_press:
+            root.reset()
+
+    MDRectangleFlatButton:
+        text: root.title_randomVerbs
+        pos_hint: {'center_x': 0.75,'center_y':0.4}
+        on_press:
+            root.randomVerbs()
+
+    MDRectangleFlatButton:
+        text: 'Generate'
+        pos_hint: {'center_x': 0.75,'center_y':0.2}
+        on_press:
+            root.randomNext()
+
+<Vocabulary>:
+    name: "Vocabulary"
+    MDLabel :
+        text: root.Screen
+        halign: 'center'
+        pos_hint: {'center_x': 0.5,'center_y':0.8}
+        font_size: 40
+
+    MDRectangleFlatButton:
+        text: 'Menu'
+        size_hint: (0.2, 0.05)
+        pos_hint: {'center_x': 0.15,'center_y':0.1}
+        on_press:
+            root.changeScreen()
+            app.root.current = "Lobby"
+            root.manager.transition.direction = "right"
