@@ -1,16 +1,52 @@
 {
     
     "Other categories":{
-        "0" : ["Frase en espanol",
-            "Have you made up your mind about job?",
-            "Tomar una decision"]
+        "0" : ["¿Que te pasó?",
+            "---",
+            "What happened to you?"]
         
     },
     
     "Ways of speaking":{
-        "0" : ["Frase en espanol",
-            "Have you made up your mind about job?",
-            "Tomar una decision"]
+        "0" : ["Como tu quieras / Depende de ti (en tono amable)",
+            "---",
+            "It's up to you"],
+        "1" : ["Por si acaso / Por si las moscas",
+            "---",
+            "Just in case"],
+        "2" : ["Vigila a…/Echa un ojo a…",
+            "---",
+            "Keep an eye on…"],
+        "3" : ["Penultimo",
+            "---",
+            "Last but one"],
+        "4" : ["Alegrame el dia",
+            "---",
+            "Make my day"],
+        "5" : ["Decidete",
+            "---",
+            "Make up your mind"],
+        "6" : ["Yo tampoco (informal)",
+            "---",
+            "Neither do I"],
+        "7" : ["Mientras tanto",
+            "---",
+            "Meanwhile"],
+        "8" : ["No importa (tono amable)",
+            "---",
+            "Never mind"],
+        "9" : ["No te preocupes / no es molestia",
+            "---",
+            "No bother"],
+        "10" : ["¡Ya lo creo!",
+            "---",
+            "Not half!"],
+        "11" : ["A eso me refiero",
+            "---",
+            "That's what I mean"],
+        "12" : ["Por cierto.",
+            "---",
+            "By the way"]
 
     },
     
