@@ -1,35 +1,57 @@
-from kivy.app import App
-from kivymd.app import MDApp
-from kivy.lang import Builder
-from kivy.uix.screenmanager import ScreenManager
-from kivy.properties import StringProperty
+from Modes import Lenguage
+from EnglishFactory import EnglishModePhonetic, EnglishModeGrammar
+from SpanishFactory import SpanishModePhonetic, SpanishModeGrammar
 
-from OBGrammar import Grammar
-from OBExpressions import Expressions
-from OBLobby import Lobby
-from OBModo import Modo
-from OBVocabulary import Vocabulary
 
-class WindowMain(ScreenManager):
-    pass
+class UseModes():
+    """
+    <<Single factory>> pattern  describes a class that has one creation
+    method with a large conditional that based on method parameters
+    chooses which product class to instantiate and then return.
 
-class Aplication(MDApp):
-    def build(self):
-        self.theme_cls.primary_palette = "LightBlue"
-        self.theme_cls.theme_style = "Dark"
-        kv = Builder.load_file("display.kv")
-        
-        return kv
+    To used it need instance first and later use method:
+    a = UseModes(1)
+    option = a.select_mode()
+    """
+    def __init__(self, option: str):
+        self.option = option
+        # self.create_lobby()
 
-    # def on_stop(self):
-    #     randomApp.stop()
+    def create_lobby(self):
+        pass
+
+    def select_mode(self):
+        if self.option == 1:
+            print("Instant SpanishModeGrammar")
+            return SpanishModeGrammar()
+        if self.option == 2:
+            print("Instant EnglishModePhonetic")
+            return EnglishModePhonetic()
+
+def client_code(factory: Lenguage) -> None:
+    """
+    The client code works with factories and products only through abstract
+    types: AbstractFactory and AbstractProduct. This lets you pass any factory
+    or product subclass to the client code without breaking it.
+    """
+    product_a = factory.mode_grammar()
+    # product_b = factory.mode_grammar()
+
+    print(f"{product_a}")
+    # print(f"{product_b.mode_grammar(product_a)}", end="")
+
 
 if __name__ == "__main__":
-    randomApp = Aplication()
-    randomApp.run()
+    """
+    The client code can work with any concrete factory class.
+    """
+    print("Client: Testing client code with the Phonetic factory type:")
+    a = UseModes(1)
+    option = a.select_mode()
+    print(dir(option))
+    client_code(option)
 
-sm = ScreenManager()
-sm.add_widget(Lobby(name="Lobby"))
-sm.add_widget(Grammar(name="Grammar"))
-sm.add_widget(Vocabulary(name="Vocabulary"))
-sm.add_widget(Expressions(name="Expressions"))
+    print("\n")
+
+    print("Client: Testing the same client code with the Grammar factory type:")
+    # client_code(EnglishModePhonetic())
