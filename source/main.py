@@ -3,7 +3,7 @@ from kivymd.app import MDApp
 from kivy.uix.screenmanager import ScreenManager
 
 from create_gui import BuildlGUI
-from modes import Mode
+from source.modes import Mode
 
 class Aplication(MDApp):
     def build(self):

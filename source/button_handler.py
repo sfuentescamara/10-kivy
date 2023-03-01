@@ -1,5 +1,5 @@
 from config import MODES
-from modes import Lenguage
+from source.modes import Lenguage
 from spanish_factory import SpanishMode
 from english_factory import EnglishMode
 

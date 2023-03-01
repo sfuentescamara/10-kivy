@@ -1,4 +1,4 @@
-from source.modes import json, Lenguage, ModeExpressions, ModeGrammar, ModePhonetic
+from modes import json, Lenguage, ModeExpressions, ModeGrammar, ModePhonetic
 
 class EnglishMode(Lenguage):
     """
