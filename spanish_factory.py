@@ -1,6 +1,6 @@
-from Modes import Lenguage, ModePhonetic, ModeGrammar
+from modes import Lenguage, ModePhonetic, ModeGrammar
 
-class EnglishMode(Lenguage):
+class SpanishMode(Lenguage):
     """
     <<Concrete Factories>> produce a family of products that belong to a single
     variant. The factory guarantees that resulting products are compatible. Note
@@ -9,16 +9,16 @@ class EnglishMode(Lenguage):
     """
 
     def mode_phonetic(self) -> ModePhonetic:
-        return EnglishModePhonetic()
+        return SpanishModePhonetic()
         
     def mode_grammar(self) -> ModeGrammar:
-        return EnglishModeGrammar()
-        
+        return SpanishModeGrammar()
 
-class EnglishModePhonetic(ModePhonetic):
+
+class SpanishModePhonetic(ModePhonetic):
     def mode_phonetic(self) -> str:
-        return "The result of the english phonetic."
+        return "The result of the spanish phonetic."
 
-class EnglishModeGrammar(ModeGrammar):
+class SpanishModeGrammar(ModeGrammar):
     def mode_grammar(self) -> str:
-        return "The result of the english grammar."
+        print("The result of the spanish grammar.")

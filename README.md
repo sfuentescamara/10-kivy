@@ -7,6 +7,9 @@ Crear entorno virtual para python
  3. Activar entorno virtual
     .\Scripts\activate
 
+Python debuger conlose
+   python -m pdb
+   
 Instalaciónd de librerias
 
     - pip install pygame

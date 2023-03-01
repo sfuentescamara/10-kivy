@@ -1,9 +1,9 @@
 {
     
-    "Other categories":{
-        "0" : ["¿Que te pasó?",
-            "---",
-            "What happened to you?"]
+    "test":{
+        "0" : [
+            ["Que te pasó?", "Que te ha ocurrido?"],
+            ["What happened to you?", "What happened?"]]
         
     },
     

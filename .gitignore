@@ -2,3 +2,4 @@
 *.apk
 *.spec
 get-pip.py
+*test*
